@@ -18,6 +18,10 @@ const guestSchema = new mongoose.Schema({
     profileImage:{
         type: String,
         trim: true
+    },
+    creator:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 }, {timestamps: true})
 
